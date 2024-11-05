@@ -16,6 +16,7 @@ export default function Card() {
             id: 0,
             name: '바보',
             description: '설명',
+            
         },
         {
             id: 1,
