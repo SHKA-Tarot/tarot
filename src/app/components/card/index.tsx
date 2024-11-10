@@ -49,7 +49,7 @@ export default function Card() {
                 <div>
                     <img src={select?.imgUrl} alt="" />
                 </div>
-                <a href={`/result?tag=${tag}?selet=${select?.name}`}>결과</a>
+                <a href={`/result?tag=${tag}&select=${select?.name}`}>결과</a>
             </div>
         </div>
     );
