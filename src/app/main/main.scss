@@ -1,0 +1,46 @@
+.container {
+  background: #333;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  max-width: 600px;
+  padding: 100px 50px;
+  box-sizing: border-box;
+  p {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 140%;
+    font-size: 16px;
+  }
+  h1 {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  a {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    width: 90%;
+    background: #4880ed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+  }
+}
