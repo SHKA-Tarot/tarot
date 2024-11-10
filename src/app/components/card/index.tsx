@@ -15,29 +15,7 @@ interface cardProps {
 
 export default function Card() {
     const [select, setSelect] = useState<cardProps | null>(null);
-
-    // const card = [
-    //     {
-    //         id: 0,
-    //         name: '바보',
-    //         description: '설명',
-    //     },
-    //     {
-    //         id: 1,
-    //         name: '바보2',
-    //         description: '설명',
-    //     },
-    //     {
-    //         id: 2,
-    //         name: '바보3',
-    //         description: '설명',
-    //     },
-    //     {
-    //         id: 3,
-    //         name: '바보4',
-    //         description: '설명',
-    //     },
-    // ];
+    const tag = '연애'
 
     const getRandumData = () => {
         const randumIndex = Math.floor(Math.random() * tarotData.length);
