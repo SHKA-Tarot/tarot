@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { tarotData } from '@/app/data/tarotData';
+import { useSearchParams } from 'next/navigation';
 
 interface cardProps {
     id: number;
@@ -15,29 +16,16 @@ interface cardProps {
 
 export default function Card() {
     const [select, setSelect] = useState<cardProps | null>(null);
+    // const params = useSearchParams();
+    // const tag = params.get('tag');
+    const tag = 'love';
 
-    // const card = [
-    //     {
-    //         id: 0,
-    //         name: '바보',
-    //         description: '설명',
-    //     },
-    //     {
-    //         id: 1,
-    //         name: '바보2',
-    //         description: '설명',
-    //     },
-    //     {
-    //         id: 2,
-    //         name: '바보3',
-    //         description: '설명',
-    //     },
-    //     {
-    //         id: 3,
-    //         name: '바보4',
-    //         description: '설명',
-    //     },
-    // ];
+    //1. 예시) 연애 카테고리를 누르면 -> 쿼리에서 파람스나 이런걸로 받는다.
+    //2. 받은 카테고리를 변수에 저장한다.
+
+    //3. 카드를 뽑는다. -> 뽑은카드를 변수에 저장한다.
+
+    //4. 결과확인을 누르면 -> 두개의 변수를 쿼리에 담아서 결과페이지로 보낸다.
 
     const getRandumData = () => {
         const randumIndex = Math.floor(Math.random() * tarotData.length);
@@ -58,10 +46,10 @@ export default function Card() {
             </div>
             <div>
                 <div>{select?.name}</div>
-                <div>{select?.loveDescription}</div>
                 <div>
                     <img src={select?.imgUrl} alt="" />
                 </div>
+                <a href={`/result?tag=${tag}?selet=${select?.name}`}>결과</a>
             </div>
         </div>
     );
